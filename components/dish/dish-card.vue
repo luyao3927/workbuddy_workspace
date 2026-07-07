@@ -61,9 +61,10 @@
         <!-- 标签区域 -->
         <view v-if="dish.tags && dish.tags.length" class="dish-card__tags">
           <dish-tag
-            v-for="tag in dish.tags"
-            :key="tag"
-            :type="tag"
+            v-for="(tag, idx) in dish.tags"
+            :key="idx"
+            :type="tag.type"
+            :text="tag.text"
           />
         </view>
 
