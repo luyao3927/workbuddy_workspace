@@ -3,61 +3,51 @@
   功能：推荐菜品 + 分类导航 + 菜品列表 + 购物车悬浮 + 下拉刷新/上拉加载
 -->
 <template>
-  <view class="page-index" :class="{ 'collage-paper-bg': true }">
+  <view class="page-index collage-paper-bg">
     <!-- 导航栏 -->
     <app-nav-bar title="私房菜谱" />
 
-    <!-- 加载骨架屏 -->
-    <app-loading v-if="pageStatus === 'loading'" type="card" :rows="4" />
-
-    <!-- 错误状态 -->
-    <app-error
-      v-else-if="pageStatus === 'error'"
-      :message="errorMessage"
-      show-retry
-      @retry="handleRetry"
-    />
-
-    <!-- 空状态 -->
-    <app-empty
-      v-else-if="pageStatus === 'empty'"
-      icon="empty-dish"
-      text="还没有菜品，敬请期待~"
-    />
-
-    <!-- 正常内容 -->
-    <template v-else>
-      <scroll-view
-        scroll-y
-        class="page-scroll"
-        refresher-enabled
-        :refresher-triggered="refreshing"
-        @refresherrefresh="onRefresh"
-        @scrolltolower="onLoadMore"
-      >
-        <!-- 推荐菜品区 -->
-        <view class="section-recommend">
-          <view class="section-header">
-            <collage-label text="✨ 今日推荐" color="var(--color-accent)" size="lg" />
-          </view>
-          <scroll-view scroll-x class="recommend-scroll" :show-scrollbar="false">
-            <view class="recommend-list">
-              <view
-                v-for="(dish, index) in recommendedDishes"
-                :key="dish.id"
-                class="recommend-item"
-              >
-                <dish-card
-                  :dish="dish"
-                  :index="index"
-                  @click="handleDishClick(dish)"
-                />
-              </view>
-            </view>
-          </scroll-view>
-          <!-- 装饰胶带 -->
-          <collage-tape color="var(--color-highlight)" :angle="-3" top="-8rpx" left="10%" />
+    <scroll-view
+      scroll-y
+      class="page-scroll"
+    >
+      <!-- 推荐菜品区 -->
+      <view class="section-recommend" v-if="recommendedDishes.length">
+        <view class="section-header">
+          <collage-label text="✨ 今日推荐" color="var(--color-accent)" size="lg" />
         </view>
+        <scroll-view scroll-x class="recommend-scroll" :show-scrollbar="false">
+          <view class="recommend-list">
+            <view
+              v-for="(dish, index) in recommendedDishes"
+              :key="dish.id"
+              class="recommend-item"
+            >
+              <dish-card
+                :dish="dish"
+                :index="index"
+                @click="handleDishClick(dish)"
+              />
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+
+      <!-- 分类导航 -->
+      <category-nav
+        v-if="categories.length"
+        :categories="categories"
+        :active-id="activeCategoryId"
+        @select="switchCategory"
+      />
+
+      <!-- 菜品列表 -->
+      <dish-grid
+        :dishes="dishes"
+        :loading="false"
+        @item-click="handleDishClick"
+      />
+    </scroll-view>
 
         <!-- 分类导航区 -->
         <view class="section-category">
@@ -106,62 +96,34 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 import { useDish } from '@/composables/useDish'
 import { useCart } from '@/composables/useCart'
-import { usePageState } from '@/composables/usePageState'
 import { useTheme } from '@/composables/useTheme'
 
-// 页面状态
 const {
   dishes,
   recommendedDishes,
   categories,
   activeCategoryId,
-  loading,
-  error,
-  hasMore,
-  refreshing,
-  initHomeData,
   switchCategory,
-  onRefresh,
-  onLoadMore
+  onRefresh
 } = useDish()
 
 const { togglePopup, goToOrder } = useCart()
-const { pageStatus, errorMessage, setLoading, setEmpty, setError, setNormal } = usePageState()
 const { initTheme } = useTheme()
 
-// 页面加载
+// 页面加载——数据已在 Store 初始化时同步加载，无需等待
 onLoad(() => {
   initTheme()
-  initHomeData()
+  switchCategory(activeCategoryId.value)
 })
-
-// 监听数据状态变化，自动切换页面状态
-watch([loading, error, dishes], () => {
-  if (error.value) {
-    setError(error.value)
-  } else if (loading.value && dishes.value.length === 0) {
-    setLoading()
-  } else if (!loading.value && dishes.value.length === 0) {
-    setEmpty('暂无菜品，敬请期待~')
-  } else {
-    setNormal()
-  }
-}, { immediate: true })
 
 // 点击菜品跳转详情
 function handleDishClick(dish) {
   uni.navigateTo({
     url: `/pages/dish-detail/index?dishId=${dish.id}`
   })
-}
-
-// 重试
-function handleRetry() {
-  initHomeData()
 }
 </script>
 
