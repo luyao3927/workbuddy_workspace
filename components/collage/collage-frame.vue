@@ -28,6 +28,7 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 /**
  * 拼贴画框组件
  * photo: 窄边框 + 阴影，模拟相纸边框

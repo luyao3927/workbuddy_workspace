@@ -18,6 +18,7 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 /**
  * 纸质纹理背景容器组件
  * 使用多层 CSS 背景叠加模拟纸张质感：

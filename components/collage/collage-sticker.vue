@@ -25,6 +25,7 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 /**
  * 贴纸装饰组件
  * 支持三种形状：圆形（circle）、星形（star）、心形（heart）

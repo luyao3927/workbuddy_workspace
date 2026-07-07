@@ -19,6 +19,7 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 /**
  * 手写感标签组件
  * 使用 var(--font-handwrite) 字体展现温暖手工风格

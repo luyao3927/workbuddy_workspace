@@ -16,6 +16,7 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 /**
  * 胶带装饰组件
  * 通过 clip-path 模拟胶带撕扯后不规则的锯齿边缘
