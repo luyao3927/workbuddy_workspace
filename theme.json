@@ -1,0 +1,14 @@
+{
+  "light": {
+    "nav-bg": "#F5F0E8",
+    "nav-text": "black",
+    "bg-primary": "#F5F0E8",
+    "bg-text-style": "dark"
+  },
+  "dark": {
+    "nav-bg": "#1A1A2E",
+    "nav-text": "white",
+    "bg-primary": "#1A1A2E",
+    "bg-text-style": "light"
+  }
+}

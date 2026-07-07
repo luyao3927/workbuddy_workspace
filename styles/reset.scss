@@ -1,0 +1,76 @@
+/* ============================================================
+ * reset.scss - 样式重置
+ * 基于 minireset.css，适配微信小程序环境
+ * ============================================================ */
+
+page,
+view,
+text,
+image,
+scroll-view,
+swiper,
+swiper-item,
+button,
+input,
+textarea,
+navigator,
+icon,
+progress,
+rich-text,
+canvas,
+video,
+map,
+form,
+label,
+picker,
+picker-view,
+slider,
+switch {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+page {
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 去除 button 默认样式 */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+button::after {
+  border: none;
+}
+
+/* 去除 input 默认样式 */
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* 图片默认行为 */
+image {
+  display: block;
+  max-width: 100%;
+}
+
+/* 滚动区域优化 */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}

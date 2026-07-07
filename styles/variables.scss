@@ -1,0 +1,98 @@
+/* ============================================================
+ * variables.scss - 全局 CSS 变量定义
+ * 统一管理项目配色、间距、圆角、字体等设计令牌
+ * 亮色模式为默认值，暗黑模式在 theme-dark.scss 中覆盖
+ * ============================================================ */
+
+:root {
+  /* ---- 背景色 ---- */
+  --bg-primary: #F5F0E8;
+  --bg-card: #FAF7F2;
+  --bg-overlay: rgba(0, 0, 0, 0.45);
+  --bg-input: #FFFFFF;
+  --bg-highlight: #FFF7ED;
+
+  /* ---- 文字色 ---- */
+  --text-primary: #3D3D3D;
+  --text-secondary: #8C8C8C;
+  --text-muted: #B8A088;
+  --text-price: #E87461;
+  --text-on-primary: #FFFFFF;
+
+  /* ---- 主题色 ---- */
+  --color-primary: #5B8C5A;
+  --color-primary-light: #A8D5A8;
+  --color-primary-bg: #E8F5E8;
+  --color-accent: #E8A87C;
+  --color-accent-light: #F5D5B8;
+  --color-highlight: #D4A5A5;
+
+  /* ---- 标签 ---- */
+  --tag-bg: #B8D4B8;
+  --tag-text: #3D6B3D;
+  --tag-recommend-bg: #FDE8E0;
+  --tag-recommend-text: #D4785C;
+  --tag-new-bg: #E0F0E8;
+  --tag-new-text: #5B8C5A;
+  --tag-spicy-bg: #FDE8E0;
+  --tag-spicy-text: #E87461;
+
+  /* ---- 边框 & 分割 ---- */
+  --border-color: #E8E0D5;
+  --border-light: #F0E8DD;
+  --divider-color: #E8E0D5;
+
+  /* ---- 阴影 ---- */
+  --shadow-sm: 0 1px 3px rgba(139, 115, 85, 0.06);
+  --shadow-md: 0 3px 12px rgba(139, 115, 85, 0.10);
+  --shadow-lg: 0 6px 24px rgba(139, 115, 85, 0.12);
+
+  /* ---- 手帐元素 ---- */
+  --paper-texture-opacity: 0.12;
+  --tape-color-cream: rgba(255, 235, 190, 0.70);
+  --tape-color-mint: rgba(180, 220, 200, 0.65);
+  --tape-color-pink: rgba(255, 200, 210, 0.65);
+  --tape-color-blue: rgba(190, 210, 235, 0.65);
+  --tape-shadow: rgba(0, 0, 0, 0.05);
+
+  /* ---- 间距 ---- */
+  --spacing-xs: 8rpx;
+  --spacing-sm: 16rpx;
+  --spacing-md: 24rpx;
+  --spacing-lg: 32rpx;
+  --spacing-xl: 48rpx;
+
+  /* ---- 圆角 ---- */
+  --radius-sm: 6rpx;
+  --radius-md: 12rpx;
+  --radius-lg: 20rpx;
+  --radius-xl: 28rpx;
+  --radius-irregular: 60% 40% 55% 45% / 45% 55% 40% 60%;
+
+  /* ---- 字体 ---- */
+  --font-handwrite: 'STKaiti', 'KaiTi', '楷体', serif;
+  --font-handwrite-bold: 'STXingkai', 'Xingkai SC', '行楷', cursive;
+  --font-body: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+
+  /* ---- 字体大小 ---- */
+  --font-size-xs: 20rpx;
+  --font-size-sm: 24rpx;
+  --font-size-md: 28rpx;
+  --font-size-lg: 32rpx;
+  --font-size-xl: 36rpx;
+  --font-size-xxl: 44rpx;
+  --font-size-title: 52rpx;
+
+  /* ---- 导航栏 ---- */
+  --nav-height: 88rpx;
+  --status-bar-height: 44px;
+
+  /* ---- 购物车 ---- */
+  --cart-float-height: 100rpx;
+
+  /* ---- 动画 ---- */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+}

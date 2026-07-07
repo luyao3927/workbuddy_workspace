@@ -1,0 +1,32 @@
+/* ============================================================
+ * fonts.scss - 字体定义
+ * 使用系统内置字体，不引入外部 Web 字体以控制包体积
+ * ============================================================ */
+
+/* 手写风格 - 楷体 */
+/* iOS: STKaiti | Android: KaiTi | 兜底: 楷体 */
+.font-kaiti {
+  font-family: 'STKaiti', 'KaiTi', '楷体', serif;
+}
+
+/* 手写风格 - 行楷（更有书法感） */
+.font-xingkai {
+  font-family: 'STXingkai', 'Xingkai SC', '行楷', cursive;
+}
+
+/* 标题字体 */
+.font-title {
+  font-family: 'STKaiti', 'KaiTi', '楷体', 'PingFang SC', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2rpx;
+}
+
+/* 正文字体 */
+.font-body {
+  font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+}
+
+/* 等宽字体（价格数字等） */
+.font-mono {
+  font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+}

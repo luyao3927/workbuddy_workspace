@@ -1,0 +1,49 @@
+{
+  "name": "私房菜馆电子菜谱",
+  "appid": "__UNI_TEST__",
+  "description": "私房菜馆电子菜谱自助点餐模板 - 手帐风格",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "app-plus": {
+    "usingComponents": true,
+    "nvueStyleCompiler": "uni-app",
+    "compilerVersion": 3,
+    "splashscreen": {
+      "alwaysShowBeforeRender": true,
+      "waiting": true,
+      "autoclose": true,
+      "delay": 0
+    },
+    "modules": {},
+    "distribute": {
+      "android": {
+        "permissions": []
+      },
+      "ios": {},
+      "sdkConfigs": {}
+    }
+  },
+  "mp-weixin": {
+    "appid": "__UNI_TEST__",
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "postcss": true,
+      "minified": true,
+      "newFeature": true,
+      "bigPackageSizeSupport": true
+    },
+    "usingComponents": true,
+    "darkmode": true,
+    "themeLocation": "theme.json",
+    "lazyCodeLoading": "requiredComponents",
+    "optimization": {
+      "subPackages": false
+    }
+  },
+  "uniStatistics": {
+    "enable": false
+  },
+  "vueVersion": "3"
+}

@@ -1,0 +1,42 @@
+/* ============================================================
+ * uni.scss - uni-app 全局 SCSS 变量
+ * 此处定义 uni-app 官方 SCSS 变量，用于组件内部引用
+ * ============================================================ */
+
+/* 主题色变量（从 theme.config.js 同步） */
+$uni-color-primary: #5B8C5A;
+$uni-color-primary-dark: #7ECB7E;
+$uni-color-accent: #E8A87C;
+$uni-color-accent-dark: #F0A878;
+$uni-color-highlight: #D4A5A5;
+
+/* 背景色 */
+$uni-bg-color: #F5F0E8;
+$uni-bg-color-dark: #1A1A2E;
+$uni-bg-card: #FAF7F2;
+$uni-bg-card-dark: #252540;
+
+/* 文字色 */
+$uni-text-color: #3D3D3D;
+$uni-text-color-dark: #E8E8E8;
+$uni-text-color-grey: #8C8C8C;
+$uni-text-color-grey-dark: #9A9A9A;
+
+/* 价格色 */
+$uni-color-price: #E87461;
+$uni-color-price-dark: #FF8A80;
+
+/* 间距 */
+$uni-spacing-sm: 16rpx;
+$uni-spacing-md: 24rpx;
+$uni-spacing-lg: 32rpx;
+$uni-spacing-xl: 48rpx;
+
+/* 圆角 */
+$uni-border-radius-sm: 6rpx;
+$uni-border-radius-md: 12rpx;
+$uni-border-radius-lg: 20rpx;
+
+/* 字体 */
+$uni-font-handwrite: 'STKaiti', 'KaiTi', '楷体', serif;
+$uni-font-body: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;

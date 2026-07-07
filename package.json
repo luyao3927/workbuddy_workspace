@@ -1,0 +1,16 @@
+{
+  "name": "recipe-book",
+  "version": "1.0.0",
+  "description": "私房菜馆电子菜谱自助点餐模板",
+  "main": "main.js",
+  "scripts": {
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "build:mp-weixin": "uni build -p mp-weixin"
+  },
+  "dependencies": {
+    "pinia": "^2.1.7"
+  },
+  "devDependencies": {},
+  "keywords": ["uniapp", "微信小程序", "电子菜谱", "点餐"],
+  "license": "MIT"
+}

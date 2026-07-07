@@ -1,0 +1,188 @@
+/* ============================================================
+ * collage.scss - 手帐风格全局样式
+ * 纸质纹理、胶带、贴纸、手写感等装饰元素的全局 CSS
+ * ============================================================ */
+
+/* ---- 纸质纹理背景 ---- */
+/* 使用 CSS 多层渐变模拟纸张质感，无需加载外部纹理图 */
+.collage-paper-bg {
+  background-color: var(--bg-card);
+  /* 细微噪点纹理 - 使用内联 SVG data URI */
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+  /* 模拟纸张折痕 */
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.015) 0%, transparent 40%, rgba(0,0,0,0.02) 100%);
+}
+
+/* 不规则圆角 - 模拟手撕边缘 */
+.collage-irregular-radius {
+  border-radius: 58% 42% 52% 48% / 46% 54% 48% 52%;
+}
+
+/* 不同大小的不规则圆角变体 */
+.collage-irregular-radius-sm {
+  border-radius: 55% 45% 50% 50% / 48% 52% 49% 51%;
+}
+
+/* ---- 胶带装饰 ---- */
+/* 基础胶带样式，具体颜色通过 CSS 变量或 class 控制 */
+.collage-tape {
+  position: absolute;
+  height: 28rpx;
+  opacity: 0.7;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.collage-tape--cream {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 235, 190, 0.45),
+    rgba(255, 235, 190, 0.75),
+    rgba(255, 235, 190, 0.50)
+  );
+}
+
+.collage-tape--mint {
+  background: linear-gradient(
+    90deg,
+    rgba(180, 220, 200, 0.40),
+    rgba(180, 220, 200, 0.70),
+    rgba(180, 220, 200, 0.45)
+  );
+}
+
+.collage-tape--pink {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 200, 210, 0.40),
+    rgba(255, 200, 210, 0.70),
+    rgba(255, 200, 210, 0.45)
+  );
+}
+
+.collage-tape--blue {
+  background: linear-gradient(
+    90deg,
+    rgba(190, 210, 235, 0.40),
+    rgba(190, 210, 235, 0.70),
+    rgba(190, 210, 235, 0.45)
+  );
+}
+
+/* ---- 手写感标签 ---- */
+.collage-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 4rpx 16rpx;
+  font-family: var(--font-handwrite);
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 1rpx dashed var(--border-color);
+  border-radius: var(--radius-sm);
+  transform: rotate(-1deg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---- 拼贴布局 ---- */
+/* 用于菜品卡片网格的不规则排列 */
+.collage-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--spacing-sm);
+}
+
+.collage-grid-item {
+  transition: transform var(--transition-normal);
+}
+
+/* nth-child 实现交替微旋转 */
+.collage-grid-item:nth-child(odd) {
+  transform: rotate(-0.8deg);
+}
+.collage-grid-item:nth-child(even) {
+  transform: rotate(1.2deg);
+}
+.collage-grid-item:nth-child(3n) {
+  transform: rotate(-0.3deg);
+}
+.collage-grid-item:nth-child(4n) {
+  transform: rotate(0.6deg);
+}
+
+/* ---- 贴纸装饰 ---- */
+.collage-sticker {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* 圆形贴纸 */
+.collage-sticker--circle {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+
+/* 星形贴纸（用 CSS 模拟简单效果） */
+.collage-sticker--star {
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.6;
+}
+
+/* ---- 拼贴画框 ---- */
+.collage-frame {
+  position: relative;
+  background: var(--bg-card);
+  border: 2rpx solid var(--border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.collage-frame--photo {
+  /* 拍立得风格：宽白边 */
+  padding: 12rpx 12rpx 32rpx;
+}
+
+/* ---- 手撕纸边效果 ---- */
+.collage-torn-edge {
+  position: relative;
+}
+.collage-torn-edge::after {
+  content: '';
+  position: absolute;
+  bottom: -4rpx;
+  left: 0;
+  right: 0;
+  height: 8rpx;
+  background: var(--bg-card);
+  /* 用 box-shadow 模拟锯齿 */
+  box-shadow:
+    0 2rpx 0 var(--bg-card),
+    4rpx 3rpx 0 var(--bg-card),
+    -4rpx 2rpx 0 var(--bg-card),
+    8rpx 1rpx 0 var(--bg-card),
+    -8rpx 3rpx 0 var(--bg-card);
+}
+
+/* ---- 手写文字下划线装饰 ---- */
+.collage-underline {
+  position: relative;
+  display: inline-block;
+}
+.collage-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2rpx;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: var(--color-accent);
+  opacity: 0.5;
+  border-radius: 2rpx;
+  transform: rotate(-0.5deg);
+}

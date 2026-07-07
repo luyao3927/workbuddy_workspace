@@ -1,0 +1,84 @@
+/* ============================================================
+ * mixins.scss - SCSS Mixin 复用
+ * 提供常用样式片段，减少重复代码
+ * ============================================================ */
+
+/* 安全区域顶部 */
+@mixin safe-area-top {
+  padding-top: var(--status-bar-height);
+}
+
+/* 安全区域底部 */
+@mixin safe-area-bottom {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 单行文本溢出 */
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 多行文本溢出 */
+@mixin text-ellipsis-multi($lines: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+}
+
+/* 清除按钮默认样式 */
+@mixin button-reset {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  line-height: inherit;
+  font-size: inherit;
+  color: inherit;
+  &::after {
+    border: none;
+  }
+}
+
+/* Flex 居中 */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Flex 两端对齐 */
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 卡片容器 */
+@mixin card($padding: var(--spacing-md)) {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: $padding;
+  box-shadow: var(--shadow-sm);
+}
+
+/* 点击反馈 */
+@mixin tap-active {
+  transition: opacity 0.1s, transform 0.1s;
+  &:active {
+    opacity: 0.8;
+    transform: scale(0.97);
+  }
+}
+
+/* 手帐纸质纹理 */
+@mixin collage-paper {
+  background-color: var(--bg-card);
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.015) 0%, transparent 40%, rgba(0,0,0,0.02) 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}

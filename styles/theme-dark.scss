@@ -1,0 +1,59 @@
+/* ============================================================
+ * theme-dark.scss - 暗黑模式 CSS 变量覆盖
+ * 通过 @media (prefers-color-scheme: dark) 自动切换
+ * 小程序和 H5 均支持此媒体查询
+ * ============================================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* ---- 背景色 ---- */
+    --bg-primary: #1A1A2E;
+    --bg-card: #252540;
+    --bg-overlay: rgba(0, 0, 0, 0.65);
+    --bg-input: #2A2A45;
+    --bg-highlight: #2A2530;
+
+    /* ---- 文字色 ---- */
+    --text-primary: #E8E8E8;
+    --text-secondary: #9A9A9A;
+    --text-muted: #6A6A80;
+    --text-price: #FF8A80;
+    --text-on-primary: #1A1A2E;
+
+    /* ---- 主题色 ---- */
+    --color-primary: #7ECB7E;
+    --color-primary-light: #4A7A4A;
+    --color-primary-bg: #2A3A2A;
+    --color-accent: #F0A878;
+    --color-accent-light: #5A4030;
+    --color-highlight: #C49090;
+
+    /* ---- 标签 ---- */
+    --tag-bg: #3A5A3A;
+    --tag-text: #A0D0A0;
+    --tag-recommend-bg: #4A3030;
+    --tag-recommend-text: #F0A090;
+    --tag-new-bg: #2A4030;
+    --tag-new-text: #80C080;
+    --tag-spicy-bg: #4A3030;
+    --tag-spicy-text: #FF8A80;
+
+    /* ---- 边框 & 分割 ---- */
+    --border-color: #333355;
+    --border-light: #2A2A45;
+    --divider-color: #333355;
+
+    /* ---- 阴影 ---- */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 3px 12px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 6px 24px rgba(0, 0, 0, 0.4);
+
+    /* ---- 手帐元素 ---- */
+    --paper-texture-opacity: 0.06;
+    --tape-color-cream: rgba(100, 85, 65, 0.40);
+    --tape-color-mint: rgba(70, 90, 80, 0.40);
+    --tape-color-pink: rgba(90, 70, 75, 0.40);
+    --tape-color-blue: rgba(65, 75, 95, 0.40);
+    --tape-shadow: rgba(0, 0, 0, 0.2);
+  }
+}
