@@ -52,10 +52,6 @@ const paperStyle = computed(() => ({
 }))
 </script>
 
-<script>
-import { computed } from 'vue'
-</script>
-
 <style lang="scss" scoped>
 /* ============================================================
  * 纸质纹理背景 - 核心样式

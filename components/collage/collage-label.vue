@@ -76,10 +76,6 @@ const labelStyle = computed(() => ({
 }))
 </script>
 
-<script>
-import { computed } from 'vue'
-</script>
-
 <style lang="scss" scoped>
 /* ============================================================
  * 手写标签 - 核心样式

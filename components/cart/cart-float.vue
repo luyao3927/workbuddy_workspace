@@ -9,23 +9,23 @@
     <view class="cart-float__left" @tap="handleClickCart">
       <view class="cart-float__icon-wrap">
         <text class="cart-float__icon">🛒</text>
-        <cart-badge :count="store.totalCount" />
+        <cart-badge :count="totalCount" />
       </view>
     </view>
 
     <!-- 中间：合计金额 -->
     <view class="cart-float__center" @tap="handleClickCart">
-      <text v-if="store.isEmpty" class="cart-float__empty-text">购物车空空如也</text>
+      <text v-if="isEmpty" class="cart-float__empty-text">购物车空空如也</text>
       <template v-else>
         <text class="cart-float__price-label">合计</text>
-        <text class="cart-float__price-value">{{ formatPriceYuan(store.totalPrice / 100) }}</text>
+        <text class="cart-float__price-value">{{ formatPriceYuan(totalPrice / 100) }}</text>
       </template>
     </view>
 
     <!-- 右侧：去下单按钮 -->
     <view
       class="cart-float__right"
-      :class="{ 'cart-float__right--disabled': store.isEmpty, 'cart-float__right--bounce': !store.isEmpty }"
+      :class="{ 'cart-float__right--disabled': isEmpty, 'cart-float__right--bounce': !isEmpty }"
       @tap="handleClickOrder"
     >
       <text class="cart-float__order-text">去下单</text>
@@ -41,24 +41,24 @@
  * 点击右侧跳转确认订单页
  * 注意：totalPrice 单位是"分"，需要除以 100 转为元
  */
-import { useCartStore } from '@/stores/useCartStore'
+import { useCart } from '@/composables/useCart'
 import { formatPriceYuan } from '@/utils/format'
 
 defineOptions({ name: 'CartFloat' })
 
 const emit = defineEmits(['click-cart', 'click-order'])
 
-const store = useCartStore()
+const { totalCount, totalPrice, isEmpty, togglePopup } = useCart()
 
 /** 点击购物车区域 -> 弹出弹窗 */
 function handleClickCart() {
   emit('click-cart')
-  store.togglePopup(true)
+  togglePopup(true)
 }
 
 /** 点击去下单 */
 function handleClickOrder() {
-  if (store.isEmpty) return
+  if (isEmpty) return
   emit('click-order')
 }
 </script>

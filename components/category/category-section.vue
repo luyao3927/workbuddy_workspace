@@ -20,7 +20,7 @@
     <!-- 空状态 -->
     <app-empty
       v-else
-      description="该分类暂无菜品"
+      text="该分类暂无菜品"
     />
   </view>
 </template>

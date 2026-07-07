@@ -90,12 +90,9 @@ const stickerStyle = computed(() => ({
   height: `${props.size}rpx`,
   top: props.top,
   left: props.left,
-  backgroundColor: stickerBgColor.value
+  backgroundColor: stickerBgColor.value,
+  '--sticker-color': stickerBgColor.value
 }))
-</script>
-
-<script>
-import { computed } from 'vue'
 </script>
 
 <style lang="scss" scoped>
@@ -206,11 +203,8 @@ import { computed } from 'vue'
     transform: rotate(45deg) translate(-15%, 15%);
   }
 
-  /* 实际背景色通过 inline style 的 backgroundColor 传入 */
-  /* 这里设置 inherit 让伪元素继承 inline style 的背景色 */
-  /* 由于伪元素无法继承 inline style，改用 CSS 变量传递 */
-  /* 使用当前背景色变量 */
-  --sticker-color: v-bind(stickerBgColor);
+  /* 实际背景色通过 inline style 传入 --sticker-color 变量 */
+  /* 伪元素通过 var(--sticker-color) 获取颜色 */
 
   &::before,
   &::after {

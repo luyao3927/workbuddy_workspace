@@ -49,16 +49,16 @@
 
         <!-- 菜品信息区 -->
         <view class="info-section">
-          <collage-paper variant="default" :rotation="-1" padding="var(--spacing-lg)">
+          <collage-paper variant="plain" :rotation="-1" padding="var(--spacing-lg)">
             <!-- 名称 + 标签 -->
             <view class="dish-header">
               <text class="dish-name">{{ currentDish.name }}</text>
               <view class="dish-tags">
                 <dish-tag
-                  v-for="tag in currentDish.tags"
-                  :key="tag"
-                  :text="tag"
-                  type="primary"
+                  v-for="(tag, idx) in currentDish.tags"
+                  :key="`tag_${idx}`"
+                  :type="tag.type"
+                  :text="tag.text"
                 />
               </view>
             </view>
@@ -184,7 +184,7 @@ onLoad((options) => {
   }
 })
 
-// 加入购物车
+  // 加入购物车
 function handleAddToCart() {
   if (!currentDish.value) return
 
@@ -193,12 +193,12 @@ function handleAddToCart() {
     return
   }
 
-  addToCart(currentDish.value.id, quantity.value, selectedSpec.value)
-  uni.showToast({
-    title: '已加入菜篮',
-    icon: 'success',
-    duration: 1500
-  })
+  // 查找选中的规格对象，addToCart 需要接收完整对象
+  const specObj = selectedSpec.value
+    ? currentDish.value.specs.find(s => s.id === selectedSpec.value)
+    : null
+
+  addToCart(currentDish.value, specObj, quantity.value)
   quantity.value = 1
 }
 

@@ -21,7 +21,7 @@
 
     <!-- 空状态 -->
     <view v-if="!items || items.length === 0" class="order-summary__empty">
-      <app-empty description="暂无菜品" />
+      <app-empty text="暂无菜品" />
     </view>
 
     <!-- 底部合计金额 -->

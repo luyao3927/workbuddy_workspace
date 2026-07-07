@@ -20,7 +20,7 @@
     <!-- 正常内容 -->
     <template v-else>
       <scroll-view scroll-y class="order-scroll">
-        <collage-paper variant="default" :rotation="-0.5" padding="var(--spacing-lg)">
+        <collage-paper variant="plain" :rotation="-0.5" padding="var(--spacing-lg)">
           <!-- 订单汇总 -->
           <view class="order-summary-section">
             <collage-label text="📋 订单详情" color="var(--color-primary)" size="md" :rotation="-2" />
@@ -63,12 +63,12 @@
       <view class="bottom-bar">
         <view class="total-info">
           <text class="total-label">合计</text>
-          <text class="total-price">{{ formatPriceYuan(totalPrice) }}</text>
+          <text class="total-price">{{ formatPriceYuan(totalPrice / 100) }}</text>
         </view>
         <button
           class="submit-btn"
           :disabled="submitting"
-          @click="handleSubmit"
+          @click="handleSubmitOrder"
         >
           {{ submitting ? '提交中…' : '提交订单' }}
         </button>
@@ -83,17 +83,26 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useCart } from '@/composables/useCart'
 import { useOrder } from '@/composables/useOrder'
 import { useTheme } from '@/composables/useTheme'
 import { formatPriceYuan } from '@/utils/format'
 
-const { selectedItems, totalPrice, isEmpty } = useCart()
-const { submitting, error: orderError, remark, handleSubmit } = useOrder()
+const { selectedItems, totalPrice, isEmpty, loadFromStorage } = useCart()
+const { submitting, error: orderError, remark, handleSubmit, goToSuccess } = useOrder()
 const { initTheme } = useTheme()
 
 initTheme()
+loadFromStorage()
+
+// 包装提交逻辑：成功后跳转
+async function handleSubmitOrder() {
+  const result = await handleSubmit()
+  if (result) {
+    goToSuccess(result.id)
+  }
+}
 
 // 返回首页
 function handleGoHome() {

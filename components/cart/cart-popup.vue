@@ -24,7 +24,7 @@
         :show-scrollbar="false"
       >
         <view v-if="store.isEmpty" class="cart-popup__empty">
-          <app-empty description="购物车暂无菜品" />
+          <app-empty text="购物车暂无菜品" />
         </view>
 
         <view v-else class="cart-popup__items">
@@ -95,7 +95,7 @@ function handleRemove(dishId, specId) {
 /** 去下单 */
 function handleOrder() {
   store.togglePopup(false)
-  uni.navigateTo({ url: '/pages/order/confirm' })
+  uni.navigateTo({ url: '/pages/order/index' })
 }
 </script>
 

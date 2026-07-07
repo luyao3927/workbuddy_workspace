@@ -60,10 +60,10 @@ export const mockDishes = [
     "name": "全能杂杂锅",
     "categoryId": "cat_01",
     "categoryName": "推荐",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg",
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png",
+      "/assets/images/common/default-dish.png"
     ],
     "price": 6800,
     "originalPrice": 7800,
@@ -100,9 +100,9 @@ export const mockDishes = [
     "name": "糖醋小排",
     "categoryId": "cat_01",
     "categoryName": "推荐",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 5800,
     "originalPrice": 6800,
@@ -124,9 +124,9 @@ export const mockDishes = [
     "name": "蒜蓉生菜",
     "categoryId": "cat_01",
     "categoryName": "推荐",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 2200,
     "originalPrice": 2800,
@@ -148,9 +148,9 @@ export const mockDishes = [
     "name": "麻婆豆腐",
     "categoryId": "cat_01",
     "categoryName": "推荐",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 3200,
     "originalPrice": 3800,
@@ -192,9 +192,9 @@ export const mockDishes = [
     "name": "裙带菜豆腐汤",
     "categoryId": "cat_01",
     "categoryName": "推荐",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 2800,
     "originalPrice": 3200,
@@ -216,9 +216,9 @@ export const mockDishes = [
     "name": "手作藕丸子",
     "categoryId": "cat_01",
     "categoryName": "推荐",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 3800,
     "originalPrice": 4200,
@@ -244,9 +244,9 @@ export const mockDishes = [
     "name": "红烧牛腩煲",
     "categoryId": "cat_02",
     "categoryName": "招牌炖菜",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 8800,
     "originalPrice": 9800,
@@ -279,9 +279,9 @@ export const mockDishes = [
     "name": "番茄炖牛腩",
     "categoryId": "cat_02",
     "categoryName": "招牌炖菜",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 7800,
     "originalPrice": 8800,
@@ -303,9 +303,9 @@ export const mockDishes = [
     "name": "菌菇杂菌煲",
     "categoryId": "cat_02",
     "categoryName": "招牌炖菜",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 5800,
     "originalPrice": 6500,
@@ -327,9 +327,9 @@ export const mockDishes = [
     "name": "酸菜鱼",
     "categoryId": "cat_02",
     "categoryName": "招牌炖菜",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 8800,
     "originalPrice": 9800,
@@ -355,9 +355,9 @@ export const mockDishes = [
     "name": "农家小炒肉",
     "categoryId": "cat_03",
     "categoryName": "时令小炒",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 4200,
     "originalPrice": 4800,
@@ -379,9 +379,9 @@ export const mockDishes = [
     "name": "干煸四季豆",
     "categoryId": "cat_03",
     "categoryName": "时令小炒",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 2800,
     "originalPrice": 3200,
@@ -398,9 +398,9 @@ export const mockDishes = [
     "name": "鱼香肉丝",
     "categoryId": "cat_03",
     "categoryName": "时令小炒",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 3800,
     "originalPrice": 4200,
@@ -422,9 +422,9 @@ export const mockDishes = [
     "name": "宫保鸡丁",
     "categoryId": "cat_03",
     "categoryName": "时令小炒",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 4200,
     "originalPrice": 4800,
@@ -446,9 +446,9 @@ export const mockDishes = [
     "name": "蒜蓉西兰花",
     "categoryId": "cat_03",
     "categoryName": "时令小炒",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 2200,
     "originalPrice": 2600,
@@ -470,9 +470,9 @@ export const mockDishes = [
     "name": "凉拌黄瓜",
     "categoryId": "cat_04",
     "categoryName": "凉菜",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 1600,
     "originalPrice": 1800,
@@ -489,9 +489,9 @@ export const mockDishes = [
     "name": "皮蛋豆腐",
     "categoryId": "cat_04",
     "categoryName": "凉菜",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 1800,
     "originalPrice": 2200,
@@ -513,9 +513,9 @@ export const mockDishes = [
     "name": "口水鸡",
     "categoryId": "cat_04",
     "categoryName": "凉菜",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 3800,
     "originalPrice": 4200,
@@ -537,9 +537,9 @@ export const mockDishes = [
     "name": "番茄蛋花汤",
     "categoryId": "cat_05",
     "categoryName": "汤羹",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 1800,
     "originalPrice": 2200,
@@ -556,9 +556,9 @@ export const mockDishes = [
     "name": "酸辣汤",
     "categoryId": "cat_05",
     "categoryName": "汤羹",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 2200,
     "originalPrice": 2600,
@@ -580,9 +580,9 @@ export const mockDishes = [
     "name": "排骨莲藕汤",
     "categoryId": "cat_05",
     "categoryName": "汤羹",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 4800,
     "originalPrice": 5500,
@@ -604,9 +604,9 @@ export const mockDishes = [
     "name": "蛋炒饭",
     "categoryId": "cat_06",
     "categoryName": "主食",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 1800,
     "originalPrice": 2200,
@@ -623,9 +623,9 @@ export const mockDishes = [
     "name": "手工水饺",
     "categoryId": "cat_06",
     "categoryName": "主食",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 2800,
     "originalPrice": 3200,
@@ -658,9 +658,9 @@ export const mockDishes = [
     "name": "阳春面",
     "categoryId": "cat_06",
     "categoryName": "主食",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 1200,
     "originalPrice": 1500,
@@ -677,9 +677,9 @@ export const mockDishes = [
     "name": "自制酸梅汤",
     "categoryId": "cat_07",
     "categoryName": "饮品",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 1200,
     "originalPrice": 1500,
@@ -712,9 +712,9 @@ export const mockDishes = [
     "name": "桂花酒酿圆子",
     "categoryId": "cat_07",
     "categoryName": "饮品",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 1600,
     "originalPrice": 1800,
@@ -736,9 +736,9 @@ export const mockDishes = [
     "name": "柠檬薄荷水",
     "categoryId": "cat_07",
     "categoryName": "饮品",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 800,
     "originalPrice": 1000,
@@ -760,9 +760,9 @@ export const mockDishes = [
     "name": "茉莉花茶",
     "categoryId": "cat_07",
     "categoryName": "饮品",
-    "image": "/assets/images/common/default-dish.svg",
+    "image": "/assets/images/common/default-dish.png",
     "images": [
-      "/assets/images/common/default-dish.svg"
+      "/assets/images/common/default-dish.png"
     ],
     "price": 800,
     "originalPrice": 0,

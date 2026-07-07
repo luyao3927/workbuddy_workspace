@@ -5,14 +5,18 @@
  */
 import { onLaunch, onShow, onHide } from '@dcloudio/uni-app'
 import { useAppStore } from '@/stores/useAppStore'
+import { useCartStore } from '@/stores/useCartStore'
 
 export default {
   setup() {
     const appStore = useAppStore()
+    const cartStore = useCartStore()
 
     onLaunch(() => {
       console.log('[App] 应用启动')
       appStore.initApp()
+      // 应用启动时从本地存储恢复购物车数据
+      cartStore.loadFromStorage()
     })
 
     onShow(() => {

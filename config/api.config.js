@@ -21,7 +21,7 @@ export const API_TIMEOUT = 15000
  * false = 使用后端 API 服务（需先启动 server/）
  * true  = 使用本地 mock 数据（无需后端）
  */
-export const USE_MOCK = false
+export const USE_MOCK = true
 
 /** 接口路径常量 */
 export const API_PATHS = {

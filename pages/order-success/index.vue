@@ -9,7 +9,7 @@
 
     <!-- 成功内容 -->
     <view class="success-content">
-      <collage-paper variant="default" :rotation="0" padding="var(--spacing-xl)">
+      <collage-paper variant="plain" :rotation="0" padding="var(--spacing-xl)">
         <!-- 成功图标 -->
         <view class="success-icon-wrapper">
           <view class="success-icon">✅</view>

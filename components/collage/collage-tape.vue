@@ -67,10 +67,6 @@ const tapeStyle = computed(() => ({
 }))
 </script>
 
-<script>
-import { computed } from 'vue'
-</script>
-
 <style lang="scss" scoped>
 /* ============================================================
  * 胶带装饰 - 核心样式

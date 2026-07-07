@@ -55,10 +55,6 @@ const frameStyle = computed(() => ({
 }))
 </script>
 
-<script>
-import { computed } from 'vue'
-</script>
-
 <style lang="scss" scoped>
 /* ============================================================
  * 拼贴画框 - 核心样式
