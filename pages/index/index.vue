@@ -106,8 +106,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { onLoad, onPullDownRefresh, onReachBottom } from '@dcloudio/uni-app'
+import { ref, watch } from 'vue'
+import { onLoad } from '@dcloudio/uni-app'
 import { useDish } from '@/composables/useDish'
 import { useCart } from '@/composables/useCart'
 import { usePageState } from '@/composables/usePageState'
@@ -130,7 +130,7 @@ const {
 } = useDish()
 
 const { togglePopup, goToOrder } = useCart()
-const { pageStatus, errorMessage, resolveStatus } = usePageState()
+const { pageStatus, errorMessage, setLoading, setEmpty, setError, setNormal } = usePageState()
 const { initTheme } = useTheme()
 
 // 页面加载
@@ -139,16 +139,16 @@ onLoad(() => {
   initHomeData()
 })
 
-// 监听数据状态变化，更新页面状态
+// 监听数据状态变化，自动切换页面状态
 watch([loading, error, dishes], () => {
   if (error.value) {
-    resolveStatus({ error, errorMessage: ref('加载失败，请重试') })
+    setError(error.value)
   } else if (loading.value && dishes.value.length === 0) {
-    resolveStatus({ loading })
+    setLoading()
   } else if (!loading.value && dishes.value.length === 0) {
-    resolveStatus({ isEmpty: true })
+    setEmpty('暂无菜品，敬请期待~')
   } else {
-    resolveStatus({ isNormal: true })
+    setNormal()
   }
 }, { immediate: true })
 

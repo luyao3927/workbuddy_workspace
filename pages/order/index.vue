@@ -97,7 +97,7 @@ initTheme()
 
 // 返回首页
 function handleGoHome() {
-  uni.switchTab({ url: '/pages/index/index' })
+  uni.reLaunch({ url: '/pages/index/index' })
 }
 
 // 返回上一页
